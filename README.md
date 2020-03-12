@@ -36,6 +36,16 @@ require File.expand_path 'app', File.dirname(__FILE__)
 run MyApp
 ```
 
+### Ruby on Rails
+
+This is an example that you might put into a Rails initializer at `config/initializers/recurl.rb`:
+
+```
+Recurl.configure do |config|
+  config.logger = Logger.new(STDOUT)
+end
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
