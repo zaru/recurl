@@ -1,6 +1,11 @@
+# frozen_string_literal: true
+
 module Recurl
   module Rack
+    # Rack middleware
     class Middleware
+      attr_reader env
+
       def initialize(app)
         @app = app
       end
@@ -19,10 +24,10 @@ module Recurl
 
       def headers
         {
-            'User-Agent' => env['HTTP_USER_AGENT'],
-            'Accept' => env['HTTP_ACCEPT'],
-            'Cookie' => env['HTTP_COOKIE']
-        }.map{|k,v| "'#{k}: #{v}'"}.join(' -H ')
+          'User-Agent' => env['HTTP_USER_AGENT'],
+          'Accept' => env['HTTP_ACCEPT'],
+          'Cookie' => env['HTTP_COOKIE']
+        }.map { |k, v| "'#{k}: #{v}'" }.join(' -H ')
       end
 
       def params
@@ -36,10 +41,6 @@ module Recurl
 
       def http_method
         "-X #{env['REQUEST_METHOD']}"
-      end
-
-      def env
-        @env
       end
 
       def logger
