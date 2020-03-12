@@ -12,6 +12,3 @@ before_script:
 script: "bundle exec rspec"
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
-addons:
-  code_climate:
-    repo_token: 508a3ddc73903dd71d407f0656d547c8a01e757a0ab558192c75d4c9db80d844
