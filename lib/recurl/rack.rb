@@ -12,13 +12,13 @@ module Recurl
 
       def call(env)
         @env = env
-        build
+        log
         @app.call env
       end
 
       private
 
-      def build
+      def log
         logger.info "curl #{http_method} #{headers} #{params} #{url}"
       end
 
