@@ -26,7 +26,8 @@ module Recurl
         {
           'User-Agent' => env['HTTP_USER_AGENT'],
           'Accept' => env['HTTP_ACCEPT'],
-          'Cookie' => env['HTTP_COOKIE']
+          'Cookie' => env['HTTP_COOKIE'],
+          'Content-Type' => env['CONTENT_TYPE']
         }.map { |k, v| " -H '#{k}: #{v}'" }.join(' ')
       end
 
