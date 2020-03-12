@@ -1,5 +1,10 @@
 # Recurl
 
+[![Code Climate](https://codeclimate.com/github/zaru/recurl/badges/gpa.svg)](https://codeclimate.com/github/zaru/recurl)
+[![Test Coverage](https://codeclimate.com/github/zaru/recurl/badges/coverage.svg)](https://codeclimate.com/github/zaru/recurl/coverage)
+[![Build Status](https://travis-ci.org/zaru/recurl.svg?branch=master)](https://travis-ci.org/zaru/recurl)
+[![Gem Version](https://badge.fury.io/rb/recurl.svg)](https://badge.fury.io/rb/recurl)
+
 Logger that reproduces access log with `curl` command.
 
 ## Installation
