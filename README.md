@@ -1,5 +1,7 @@
 # Recurl
 
+Logger that reproduces access log with `curl` command.
+
 ## Installation
 
 Add this line to your application's Gemfile:
