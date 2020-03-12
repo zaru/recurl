@@ -4,7 +4,7 @@ module Recurl
   module Rack
     # Rack middleware
     class Middleware
-      attr_reader env
+      attr_reader :env
 
       def initialize(app)
         @app = app
