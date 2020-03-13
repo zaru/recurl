@@ -20,6 +20,7 @@ module Recurl
 
       def log
         logger.info "curl #{http_method} #{headers} #{params} #{url}"
+        ::Rack::Request.new(env).body.rewind
       end
 
       def headers
